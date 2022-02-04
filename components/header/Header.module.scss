@@ -1,0 +1,35 @@
+@import "../../styles/colors";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $header_background;
+  height: 56px;
+  width: 100%;
+
+  .content {
+    display: flex;
+    align-items: center;
+    width: 1440px;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    .logo {
+      margin-left: 112px;
+      width: 185px;
+      height: 24px;
+
+      @media (max-width: 768px) {
+        width: 140px;
+        margin-left: 0px;
+      }
+
+      path {
+        fill: $header_txt;
+      }
+    }
+  }
+}

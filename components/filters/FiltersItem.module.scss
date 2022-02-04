@@ -1,0 +1,33 @@
+@import "../../styles/colors";
+
+.btn_item {
+  width: fit-content;
+  height: 40px;
+
+  .btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: $filters_btn_background;
+    color: $filters_btn_txt;
+  }
+
+  .btn_selected {
+    background-color: $filters_btn_background_hover;
+    color: $filters_btn_txt_hover;
+  }
+
+  @media (max-width: 768px) {
+    height: 32px;
+
+    .btn {
+      line-height: 20px;
+      font-size: 14px;
+    }
+  }
+}

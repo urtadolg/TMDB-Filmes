@@ -1,0 +1,25 @@
+@import "../../../styles/colors";
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0px 112px 49px 112px;
+
+  @media (max-width: 768px) {
+    padding: 0px 16px 49px 16px;
+  }
+
+  .content {
+    h2 {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+
+    .trailer_container {
+      max-width: 907px;
+      height: 510px;
+      background-color: $gray;
+    }
+  }
+}
