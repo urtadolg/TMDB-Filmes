@@ -11,7 +11,7 @@ const FiltersList = () => {
   let filtersItem;
   if (availableFilters.length > 0) {
     filtersItem = availableFilters.map((item, index) => (
-      <FiltersItem key={index} name={item} />
+      <FiltersItem key={index} name={item.name} genreId={item.id} />
     ));
   } else {
     filtersItem = <p>No filters to be selected.</p>;

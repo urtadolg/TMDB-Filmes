@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { filterActions } from "./filterSlice";
 
 export const filmSlice = createSlice({
   name: "films",
@@ -40,14 +41,21 @@ export const filmSlice = createSlice({
         ],
       },
     },
+    isLoading: false,
   },
   reducers: {
     setFilmDetails(state, action) {
       state.filmDetails = action.payload;
     },
+    startLoadingState(state) {
+      state.isLoading = true;
+    },
+    stopLoadingState(state) {
+      state.isLoading = false;
+    },
   },
 });
 
-export const filterActions = filmSlice.actions;
+export const filmActions = filmSlice.actions;
 
 export default filmSlice.reducer;

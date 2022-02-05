@@ -4,7 +4,9 @@ module.exports = {
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
-
     return config;
+  },
+  env: {
+    API_KEY: process.env.API_KEY,
   },
 };

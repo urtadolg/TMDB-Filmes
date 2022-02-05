@@ -4,30 +4,24 @@ export const filterSlice = createSlice({
   name: "filters",
   initialState: {
     selectedFilters: [],
-    availableFilters: [
-      "Ação",
-      "Aventura",
-      "Animação",
-      "Comédia",
-      "Crime",
-      "Documentário",
-      "Drama",
-      "Família",
-      "Fantasia",
-      "História",
-      "Terror",
-      "Música",
-      "Mistério",
-      "Romance",
-      "Ficção científica",
-      "Cinema TV",
-      "Thriller",
-      "Guerra",
-      "Faroeste",
-    ],
+    availableFilters: [],
   },
   reducers: {
-    selectFilter(state, action) {},
+    toggleFilter(state, action) {
+      const foundFilter = state.selectedFilters.includes(action.payload);
+
+      if (foundFilter) {
+        state.selectedFilters = state.selectedFilters.filter(
+          (filter) => filter != action.payload
+        );
+      } else {
+        state.selectedFilters.push(action.payload);
+      }
+    },
+
+    setAvailableFilters(state, action) {
+      state.availableFilters = action.payload;
+    },
   },
 });
 

@@ -1,5 +1,5 @@
 import react from "react";
-import FilterButtons from "./FiltersList";
+import FiltersList from "./FiltersList";
 import styles from "./Filters.module.scss";
 
 const Filters = () => {
@@ -7,7 +7,7 @@ const Filters = () => {
     <section className={styles.container}>
       <div className={styles.content}>
         <h1>Milhões de filmes, séries e pessoas para descobrir. Explore já.</h1>
-        <FilterButtons />
+        <FiltersList />
       </div>
     </section>
   );

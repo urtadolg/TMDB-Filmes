@@ -1,19 +1,23 @@
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { filmActions } from "../../../store/filmSlice";
 import styles from "./FilmsList.module.scss";
 import { useRouter } from "next/router";
 import useThemoviedb from "../../../hooks/useThemoviedb";
 
 const FilmsList = () => {
   const router = useRouter();
-  const { sendMoviesRequest, moviesList, hasResponseError } = useThemoviedb();
+  const dispatch = useDispatch();
+  const { sendMoviesRequest, moviesList, emptyMoviesList, hasResponseError } =
+    useThemoviedb();
+  const selectedFilters = useSelector((state) => state.filters.selectedFilters);
 
   useEffect(() => {
     const sendRequest = async () => {
-      await sendMoviesRequest(1);
+      await sendMoviesRequest(1, selectedFilters);
     };
-
     sendRequest();
-  }, []);
+  }, [selectedFilters]);
 
   if (hasResponseError) {
     return (
@@ -21,7 +25,20 @@ const FilmsList = () => {
         <div className={styles.content}>
           <h1 className={styles.error_title}>Ops...</h1>
           <p className={styles.error_message}>
-            Erro ao acessar o servidor, por favor tente novamente mais tarde.
+            Erro ao acessar o servidor. Por favor, tente novamente mais tarde.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (emptyMoviesList) {
+    return (
+      <section className={styles.container}>
+        <div className={styles.content}>
+          <h1 className={styles.error_title}>Ops...</h1>
+          <p className={styles.error_message}>
+            Nenhum filme encontrado. Tente outros filtros.
           </p>
         </div>
       </section>
@@ -29,7 +46,8 @@ const FilmsList = () => {
   }
 
   const showDetailsHandler = () => {
-    router.push(`/loading/123456`);
+    dispatch(filmActions.startLoadingState());
+    router.push(`/details/12345`);
   };
 
   return (
