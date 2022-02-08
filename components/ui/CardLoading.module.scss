@@ -1,0 +1,39 @@
+@import "../../styles/colors";
+@import "../../styles/loading";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 185px;
+  height: 358px;
+
+  @media (max-width: 768px) {
+    width: 156px;
+  }
+
+  .imgPlaceholder {
+    border-radius: 4px;
+    width: 100%;
+    height: 278px;
+    @include loading_animation;
+  }
+
+  .descPlaceholder {
+    width: 100%;
+    height: 72px;
+
+    .title {
+      width: 80%;
+      height: 30px;
+      margin-bottom: 5px;
+      @include loading_animation;
+    }
+
+    .desc {
+      width: 60%;
+      height: 20px;
+      @include loading_animation;
+    }
+  }
+}

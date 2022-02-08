@@ -7,7 +7,7 @@ $very_light_gray: #e5e5e5;
 $light_gray: #dddddd;
 $slightly_light_gray: #adadad;
 $gray: #646464;
-$desaturated_gray: #585858;
+$desaturated_gray: #969696;
 $dark_gray: #323232;
 $very_dark_gray: #131313;
 $black: #000000;
@@ -24,16 +24,16 @@ $filters_btn_background_hover: $yellow;
 $filters_btn_txt: $dark_gray;
 $filters_btn_txt_hover: $white;
 
-//FILMLIST
-$filmslist_background: $white;
-$filmslist_title: $black;
-$filmslist_date: $gray;
+//MOVIELIST
+$movieslist_background: $white;
+$movieslist_title: $black;
+$movieslist_date: $gray;
 
-//FILMDETAIL
-$filmdetail_background: $very_light_gray;
-$filmdetail_header_background: $dark_purple;
-$filmdetail_header_title: $white;
-$filmdetail_header_description: $light_gray;
-$filmdetail_cast_txt: $very_dark_gray;
-$filmdetail_cast_scrollbar_background: $light_gray;
-$filmdetail_cast_scrollbar_thumb: $slightly_light_gray;
+//MOVIEDETAIL
+$moviedetail_background: $very_light_gray;
+$moviedetail_header_background: $dark_purple;
+$moviedetail_header_title: $white;
+$moviedetail_header_description: $light_gray;
+$moviedetail_cast_txt: $very_dark_gray;
+$moviedetail_cast_scrollbar_background: $light_gray;
+$moviedetail_cast_scrollbar_thumb: $slightly_light_gray;

@@ -15,7 +15,7 @@
     margin-bottom: 24px;
   }
 
-  .films_list {
+  .movies_list {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -28,7 +28,7 @@
       row-gap: 32px;
     }
 
-    .films_item {
+    .movies_item {
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -41,25 +41,25 @@
         gap: 10px;
       }
 
-      .film_banner {
+      .movie_banner {
         width: 100%;
         height: 264px;
         border-radius: 4px;
         background-color: $gray;
       }
 
-      .film_title {
+      .movie_title {
         font-size: 16px;
-        color: $filmslist_title;
+        color: $movieslist_title;
         @media (max-width: 768px) {
           font-size: 14px;
           line-height: 20px;
         }
       }
 
-      .film_date {
+      .movie_date {
         font-size: 14px;
-        color: $filmslist_date;
+        color: $movieslist_date;
         @media (max-width: 768px) {
           font-size: 12px;
           line-height: 18px;

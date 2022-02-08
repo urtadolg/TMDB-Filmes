@@ -1,0 +1,22 @@
+@import "./colors";
+
+@mixin custom_scrollbar {
+  scrollbar-color: $moviedetail_cast_scrollbar_thumb
+    $moviedetail_cast_scrollbar_background;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $moviedetail_cast_scrollbar_thumb;
+    border-radius: 100px;
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar {
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $moviedetail_cast_scrollbar_background;
+    border-radius: 100px;
+  }
+}

@@ -1,14 +1,14 @@
 import React from "react";
 import Cast from "./Cast";
-import styles from "./FilmDetail.module.scss";
+import styles from "./MovieDetail.module.scss";
 import MainDetails from "./MainDetails";
 import SeeAlso from "./SeeAlso";
 import Trailer from "./Trailer";
 
-const FilmDetail = () => {
+const MovieDetail = (props) => {
   return (
     <section className={styles.container}>
-      <MainDetails />
+      <MainDetails {...props.main_details} />
       <Cast />
       <Trailer />
       <SeeAlso />
@@ -16,4 +16,4 @@ const FilmDetail = () => {
   );
 };
 
-export default FilmDetail;
+export default MovieDetail;

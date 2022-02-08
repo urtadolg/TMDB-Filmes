@@ -1,19 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import styles from "./DetailsLoadingPage.module.scss";
 
 const DetailsLoadingPage = () => {
-  const { title, summary, vote_avarage, overview, people } = useSelector(
-    (state) => state.films.film_details.main_details
-  );
-
   return (
     <React.Fragment>
       <div className={styles.content}>
         <section className={styles.main_details}>
-          <div className={styles.film_banner} />
+          <div className={styles.movie_banner} />
           <div className={styles.description_container}>
-            <h1 className={styles.film_title} />
+            <h1 className={styles.movie_title} />
             <p className={styles.desc_summary} />
             <p
               style={{ display: "none" }}
@@ -24,8 +19,8 @@ const DetailsLoadingPage = () => {
               <p />
             </div>
             <h2 />
-            <p className={styles.film_synopsis} />
-            <ul className={styles.film_people_list}>
+            <p className={styles.movie_synopsis} />
+            <ul className={styles.movie_people_list}>
               <li className={styles.people_item}>
                 <h3 />
                 <p />

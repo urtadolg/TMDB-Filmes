@@ -1,4 +1,5 @@
 @import "../../styles/colors";
+@import "../../styles/loading";
 
 .content {
   display: flex;
@@ -25,7 +26,7 @@
       gap: 42px;
     }
 
-    .film_banner {
+    .movie_banner {
       min-width: 383px;
       height: 574px;
       border-radius: 8px;
@@ -34,15 +35,7 @@
       position: absolute;
       top: 0px;
       left: 0px;
-      background: gray;
-      background: linear-gradient(
-        90deg,
-        $desaturated_gray 0%,
-        $gray,
-        $desaturated_gray 50%
-      );
-      background-size: 200% 100%;
-      animation: 1.2s loadingAnimation linear infinite;
+      @include loading_animation;
 
       @media (max-width: 768px) {
         position: inherit;
@@ -57,24 +50,15 @@
     .description_container {
       max-width: 800px;
       height: 100%;
-      color: $filmdetail_header_title;
+      color: $moviedetail_header_title;
       margin-left: 416px;
 
-      .film_title {
+      .movie_title {
         margin-bottom: 8px;
         color: transparent;
         width: 244px;
         height: 38px;
-        background: gray;
-        background: linear-gradient(
-          90deg,
-          $desaturated_gray 0%,
-          $gray,
-          $desaturated_gray 50%
-        );
-        background-size: 200% 100%;
-        border-radius: 5px;
-        animation: 1.2s 0.2s loadingAnimation linear infinite;
+        @include loading_animation;
       }
 
       .desc_summary,
@@ -83,16 +67,7 @@
         min-width: 100%;
         min-height: 25px;
         color: transparent;
-        background: gray;
-        background: linear-gradient(
-          90deg,
-          $desaturated_gray 0%,
-          $gray,
-          $desaturated_gray 50%
-        );
-        background-size: 200% 100%;
-        border-radius: 5px;
-        animation: 1.2s 0.1s loadingAnimation linear infinite;
+        @include loading_animation;
 
         @media (max-width: 768px) {
           display: none;
@@ -120,31 +95,14 @@
           height: 60px;
           border-radius: 50%;
           color: transparent;
-          background: gray;
-          background: linear-gradient(
-            90deg,
-            $desaturated_gray 0%,
-            $gray,
-            $desaturated_gray 50%
-          );
-          background-size: 200% 100%;
-          animation: 1.2s 0.1s loadingAnimation linear infinite;
+          @include loading_animation;
         }
 
         p {
           width: 102px;
           min-height: 40px;
           color: transparent;
-          background: gray;
-          background: linear-gradient(
-            90deg,
-            $desaturated_gray 0%,
-            $gray,
-            $desaturated_gray 50%
-          );
-          background-size: 200% 100%;
-          border-radius: 5px;
-          animation: 1.2s 0.1s loadingAnimation linear infinite;
+          @include loading_animation;
         }
       }
 
@@ -153,40 +111,22 @@
         width: 100px;
         height: 35px;
         color: transparent;
-        background: gray;
-        background: linear-gradient(
-          90deg,
-          $desaturated_gray 0%,
-          $gray,
-          $desaturated_gray 50%
-        );
-        background-size: 200% 100%;
-        border-radius: 5px;
-        animation: 1.2s 0.1s loadingAnimation linear infinite;
+        @include loading_animation;
       }
 
-      .film_synopsis {
+      .movie_synopsis {
         margin-bottom: 20px;
         width: 100%;
         height: 130px;
         color: transparent;
-        background: gray;
-        background: linear-gradient(
-          90deg,
-          $desaturated_gray 0%,
-          $gray,
-          $desaturated_gray 50%
-        );
-        background-size: 200% 100%;
-        border-radius: 5px;
-        animation: 1.2s 0.1s loadingAnimation linear infinite;
+        @include loading_animation;
 
         @media (max-width: 768px) {
           margin-bottom: 33px;
         }
       }
 
-      .film_people_list {
+      .movie_people_list {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -201,16 +141,7 @@
           width: 174px;
           height: 60px;
           color: transparent;
-          background: gray;
-          background: linear-gradient(
-            90deg,
-            $desaturated_gray 0%,
-            $gray,
-            $desaturated_gray 50%
-          );
-          background-size: 200% 100%;
-          border-radius: 5px;
-          animation: 1.2s 0.1s loadingAnimation linear infinite;
+          @include loading_animation;
 
           @media (max-width: 768px) {
             width: 45%;
@@ -222,11 +153,5 @@
 
   @media (max-width: 768px) {
     padding: 34px 0;
-  }
-}
-
-@keyframes loadingAnimation {
-  to {
-    background-position-x: -200%;
   }
 }

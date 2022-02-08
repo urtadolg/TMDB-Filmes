@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import filterReducer from "./filterSlice";
-import filmsReducer from "./filmSlice";
+import moviesReducer from "./movieSlice";
 
 export default configureStore({
-  reducer: { filters: filterReducer, films: filmsReducer },
+  reducer: { filters: filterReducer, movies: moviesReducer },
 });

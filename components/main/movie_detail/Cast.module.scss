@@ -1,4 +1,5 @@
 @import "../../../styles/colors";
+@import "../../../styles/mixings";
 
 .container {
   max-width: 1440px;
@@ -14,7 +15,7 @@
     margin-bottom: 24px;
     font-size: 28px;
     line-height: 32px;
-    color: $filmdetail_cast_txt;
+    color: $moviedetail_cast_txt;
   }
 
   .cast_list {
@@ -24,24 +25,8 @@
     height: fit-content;
     padding-bottom: 26px;
     overflow: auto;
-    scrollbar-color: $filmdetail_cast_scrollbar_thumb
-      $filmdetail_cast_scrollbar_background;
-    scrollbar-width: thin;
 
-    &::-webkit-scrollbar-thumb {
-      background-color: $filmdetail_cast_scrollbar_thumb;
-      border-radius: 100px;
-      background-clip: padding-box;
-    }
-
-    &::-webkit-scrollbar {
-      height: 12px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: $filmdetail_cast_scrollbar_background;
-      border-radius: 100px;
-    }
+    @include custom_scrollbar();
 
     .cast_item {
       min-width: 191px;

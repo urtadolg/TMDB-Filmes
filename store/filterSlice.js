@@ -5,6 +5,7 @@ export const filterSlice = createSlice({
   initialState: {
     selectedFilters: [],
     availableFilters: [],
+    selectedPage: 1,
   },
   reducers: {
     toggleFilter(state, action) {
@@ -21,6 +22,10 @@ export const filterSlice = createSlice({
 
     setAvailableFilters(state, action) {
       state.availableFilters = action.payload;
+    },
+
+    setSelectedPage(state, action) {
+      state.selectedPage = action.payload;
     },
   },
 });

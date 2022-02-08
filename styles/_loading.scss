@@ -1,0 +1,19 @@
+@import "./colors";
+
+@mixin loading_animation {
+  background: $gray;
+  background: linear-gradient(
+    90deg,
+    $desaturated_gray 0%,
+    $slightly_light_gray,
+    $desaturated_gray 50%
+  );
+  background-size: 200% 100%;
+  animation: 1.2s loadingAnimation linear infinite;
+}
+
+@keyframes loadingAnimation {
+  to {
+    background-position-x: -200%;
+  }
+}

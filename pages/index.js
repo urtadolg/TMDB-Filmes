@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Head from "next/head";
 import Filters from "../components/filters/Filters";
-import FilmsList from "../components/main/most_popular_list/FilmsList";
+import MoviesList from "../components/main/most_popular_list/MoviesList";
 import DetailsLoadingPage from "../components/ui/DetailsLoadingPage";
 import useThemoviedb from "../hooks/useThemoviedb";
 
@@ -16,7 +16,7 @@ const HomePage = () => {
     if (availableFilters.length == 0) getAvailableFilters();
   }, []);
 
-  const isLoading = useSelector((state) => state.films.isLoading);
+  const isLoading = useSelector((state) => state.movies.isLoading);
 
   if (isLoading) {
     return <DetailsLoadingPage />;
@@ -27,12 +27,12 @@ const HomePage = () => {
       <Head>
         <meta
           name="description"
-          content="Milhões de filmes, séries e pessoas para descobrir. Explore já. Aqui você encontra o filme que está procurando."
+          content="Milhões de moviees, séries e pessoas para descobrir. Explore já. Aqui você encontra o moviee que está procurando."
         />
         <title>Promobit Test</title>
       </Head>
       <Filters />
-      <FilmsList />
+      <MoviesList />
     </React.Fragment>
   );
 };

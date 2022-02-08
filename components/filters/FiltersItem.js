@@ -11,6 +11,7 @@ const FiltersItem = (props) => {
 
   const onSelectHandler = async () => {
     dispatch(filterActions.toggleFilter(props.genreId));
+    dispatch(filterActions.setSelectedPage(1));
   };
 
   const isFilterSelected = useSelector((state) =>
