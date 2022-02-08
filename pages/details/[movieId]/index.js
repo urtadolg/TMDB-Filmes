@@ -49,6 +49,8 @@ export async function getStaticProps(context) {
 
   const movieDetailsData = await sendMovieDetailsRequest(movieId);
 
+  //console.log(movieDetailsData);
+
   return {
     props: movieDetailsData,
     revalidate: 3600,

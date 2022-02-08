@@ -1,0 +1,25 @@
+@import "../../styles/colors";
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+  canvas {
+    display: block;
+    height: 80%;
+  }
+
+  .vote_average {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    transform: translate(-50%, -50%);
+    color: $green;
+    letter-spacing: -0.5%;
+  }
+}

@@ -62,7 +62,8 @@
     }
 
     .description_container {
-      width: 800px;
+      width: 100%;
+      max-width: 800px;
       height: 100%;
       color: $moviedetail_header_title;
       margin-left: 416px;
@@ -99,21 +100,6 @@
         align-items: center;
         gap: 12px;
         margin-bottom: 32px;
-
-        .ui_evaluation_percentage {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 60px;
-          height: 60px;
-          border: $green solid 5px;
-          border-color: $green $green $green transparent;
-          border-radius: 50%;
-          color: $green;
-          background-color: rgba(255, 255, 255, 0.082);
-          font-size: 16px;
-          line-height: 38px;
-        }
 
         p {
           font-size: 16px;
@@ -152,12 +138,15 @@
         display: flex;
         flex-wrap: wrap;
         gap: 33px;
-        width: fit-content;
+        width: 100%;
+        max-width: 600px;
         height: 120px;
+        overflow: auto;
 
         @media (max-width: 768px) {
           gap: 0px;
           row-gap: 23px;
+          height: fit-content;
         }
 
         .people_item {

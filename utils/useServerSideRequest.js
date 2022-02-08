@@ -10,16 +10,18 @@ export const sendMovieDetailsRequest = async (movieId) => {
 
     const formatedMovieData = formatMovieData(response, releaseInformations);
 
+    console.log(formatedMovieData.cast);
     return formatedMovieData;
   } catch (error) {
+    const customError =
+      "Detalhes do filme não encontrado. Por favor, tente novamente mais tarde.";
     console.log(error);
-    return {
-      error:
-        "Detalhes do movie não encontrado. Por favor, tente novamente mais tarde.",
 
+    return {
+      error: customError,
       main_details: {
-        overview: "",
-        title: "",
+        title: "Detalhes não encontrado",
+        overview: customError,
       },
     };
   }
@@ -172,7 +174,7 @@ function formatMovieData(response, releaseInformations) {
     },
 
     cast: {
-      list: [],
+      list: formatCastList(response.data.credits.cast),
     },
 
     trailer: {
@@ -225,4 +227,15 @@ function formatPeople(crewList) {
   }, []);
 
   return filteredCrewList;
+}
+
+function formatCastList(castList) {
+  const formatedCastList = castList.map((item) => {
+    return {
+      profile_pic: `http://image.tmdb.org/t/p/w185/${item.profile_path}`,
+      character_name: item.character,
+    };
+  });
+
+  return formatedCastList;
 }

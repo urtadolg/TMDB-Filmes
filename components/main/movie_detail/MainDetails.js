@@ -1,4 +1,5 @@
 import React from "react";
+import CanvasRoundedGraph from "../../ui/CanvasRoundedGraph";
 import styles from "./MainDetails.module.scss";
 
 const MainDetails = ({
@@ -32,9 +33,9 @@ const MainDetails = ({
             {summary.runtime}
           </p>
           <div className={styles.public_evaluation_container}>
-            <div className={styles.ui_evaluation_percentage}>
-              {vote_average}
-            </div>
+            <CanvasRoundedGraph
+              percentage={parseInt(vote_average)}
+            ></CanvasRoundedGraph>
             <p>Avaliação dos usuários</p>
           </div>
           <h2>Sinopse</h2>
