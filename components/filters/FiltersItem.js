@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterActions } from "../../store/filterSlice";
 import styles from "./FiltersItem.module.scss";
 import CrossIcon from "../../public/btn_close_cross.svg";
-import useThemoviedb from "../../hooks/useThemoviedb";
 
 const FiltersItem = (props) => {
   const dispatch = useDispatch();
-  const { sendMoviesRequest } = useThemoviedb();
 
   const onSelectHandler = async () => {
     dispatch(filterActions.toggleFilter(props.genreId));

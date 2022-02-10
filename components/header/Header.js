@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../../public/tmdb_logo.svg";
 import styles from "./Header.module.scss";
 
-const Header = (props) => {
+const Header = () => {
   const router = useRouter();
 
   const logoClickHandler = () => {

@@ -1,4 +1,3 @@
-import react from "react";
 import FiltersList from "./FiltersList";
 import styles from "./Filters.module.scss";
 

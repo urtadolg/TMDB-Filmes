@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "./CanvasRoundedGraph.module.scss";
 import makeGraph from "../../utils/useCanvas";
 
@@ -13,7 +13,7 @@ const CanvasRoundedGraph = (props) => {
 
   useEffect(() => {
     makeGraph(vote_average);
-  }, []);
+  }, [vote_average]);
 
   return (
     <>

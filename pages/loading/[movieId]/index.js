@@ -8,7 +8,7 @@ const LoadingPage = () => {
 
   useEffect(() => {
     router.replace(`/details/${movieId}`);
-  }, []);
+  }, [router, movieId]);
 
   return <DetailsLoadingPage />;
 };

@@ -1,8 +1,7 @@
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import styles from "./SeeAlso.module.scss";
-import DetailsLoadingPage from "../../ui/DetailsLoadingPage";
+import Image from "next/image";
 
 const SeeAlso = (props) => {
   const router = useRouter();
@@ -11,12 +10,6 @@ const SeeAlso = (props) => {
     const id = event.currentTarget.id;
     router.push(`/loading/${id}`);
   };
-
-  const isLoading = useSelector((state) => state.movies.isLoading);
-
-  if (isLoading) {
-    return <DetailsLoadingPage />;
-  }
 
   return (
     <section className={styles.container}>
@@ -31,7 +24,12 @@ const SeeAlso = (props) => {
               id={item.id}
             >
               <div className={styles.movie_banner}>
-                <img src={item.banner} alt={item.title} />
+                <Image
+                  src={item.banner}
+                  alt={item.title}
+                  width="176"
+                  height="264"
+                />
               </div>
               <div>
                 <h3 className={styles.movie_title}>{item.title}</h3>

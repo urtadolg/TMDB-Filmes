@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import Head from "next/head";
 import Filters from "../components/filters/Filters";
 import MoviesList from "../components/main/most_popular_list/MoviesList";
-import DetailsLoadingPage from "../components/ui/DetailsLoadingPage";
 import useThemoviedb from "../hooks/useThemoviedb";
 
 const HomePage = () => {
@@ -14,13 +13,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (availableFilters.length == 0) getAvailableFilters();
-  }, []);
-
-  const isLoading = useSelector((state) => state.movies.isLoading);
-
-  if (isLoading) {
-    return <DetailsLoadingPage />;
-  }
+  }, [availableFilters.length, getAvailableFilters]);
 
   return (
     <React.Fragment>

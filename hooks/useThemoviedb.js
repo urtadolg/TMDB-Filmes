@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { filterActions } from "../store/filterSlice";
 import axios from "axios";
@@ -10,7 +10,7 @@ const useThemoviedb = () => {
   const [hasResponseError, setHasResponseError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  async function sendMoviesRequest(page, selectedFilters) {
+  const sendMoviesRequest = useCallback(async (page, selectedFilters) => {
     const requestUrl = buildURL(page, selectedFilters);
 
     try {
@@ -31,7 +31,7 @@ const useThemoviedb = () => {
       setHasResponseError(e);
       console.log(e);
     }
-  }
+  }, []);
 
   function buildURL(page, selectedFilters) {
     if (hasFilters(selectedFilters)) {
@@ -114,7 +114,7 @@ const useThemoviedb = () => {
 
   const dispatch = useDispatch();
 
-  async function getAvailableFilters() {
+  const getAvailableFilters = useCallback(async () => {
     try {
       const result = await axios.get(
         `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.API_KEY}&language=pt-br`
@@ -125,7 +125,7 @@ const useThemoviedb = () => {
       console.log(error);
       setHasResponseError(true);
     }
-  }
+  }, []);
 
   return {
     sendMoviesRequest,

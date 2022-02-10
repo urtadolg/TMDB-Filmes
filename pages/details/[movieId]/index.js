@@ -1,15 +1,9 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { movieActions } from "../../../store/movieSlice";
+import React from "react";
 import Head from "next/head";
 import MovieDetail from "../../../components/main/movie_detail/MovieDetail";
 import { sendMovieDetailsRequest } from "../../../utils/useServerSideRequest";
 
 const HomePage = (props) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => dispatch(movieActions.stopLoadingState()));
-
   return (
     <React.Fragment>
       <Head>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { movieActions } from "../../../store/movieSlice";
+import { useSelector } from "react-redux";
 import styles from "./MoviesList.module.scss";
 import { useRouter } from "next/router";
 import useThemoviedb from "../../../hooks/useThemoviedb";
@@ -9,6 +8,9 @@ import CardLoading from "../../ui/CardLoading";
 import MovieItem from "./MovieItem";
 
 const MoviesList = () => {
+  const router = useRouter();
+  const selectedFilters = useSelector((state) => state.filters.selectedFilters);
+  const selectedPage = useSelector((state) => state.filters.selectedPage);
   const {
     sendMoviesRequest,
     moviesList,
@@ -17,15 +19,13 @@ const MoviesList = () => {
     hasResponseError,
     isLoading,
   } = useThemoviedb();
-  const selectedFilters = useSelector((state) => state.filters.selectedFilters);
-  const selectedPage = useSelector((state) => state.filters.selectedPage);
 
   useEffect(() => {
     const sendRequest = async () => {
       await sendMoviesRequest(selectedPage, selectedFilters);
     };
     sendRequest();
-  }, [selectedPage, selectedFilters]);
+  }, [sendMoviesRequest, selectedPage, selectedFilters]);
 
   if (hasResponseError) {
     return (
@@ -52,9 +52,6 @@ const MoviesList = () => {
       </section>
     );
   }
-
-  const router = useRouter();
-  const dispatch = useDispatch();
 
   const showDetailsHandler = (movieId) => {
     router.push(`/loading/${movieId}`);

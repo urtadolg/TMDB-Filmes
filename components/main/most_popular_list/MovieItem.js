@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./MovieItem.module.scss";
+import Image from "next/image";
 
 const MovieItem = (props) => {
   const onItemClickHandler = () => {
@@ -9,7 +10,7 @@ const MovieItem = (props) => {
   return (
     <li onClick={onItemClickHandler} className={styles.movies_item}>
       <div className={styles.movie_banner}>
-        <img src={props.banner} alt={props.title} />
+        <Image src={props.banner} alt={props.title} width="185" height="278" />
       </div>
       <div>
         <h2 className={styles.movie_title}>{props.title}</h2>
