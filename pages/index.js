@@ -27,7 +27,7 @@ const HomePage = () => {
       <Head>
         <meta
           name="description"
-          content="Milhões de moviees, séries e pessoas para descobrir. Explore já. Aqui você encontra o moviee que está procurando."
+          content="Milhões de filmes, séries e pessoas para descobrir. Explore já. Aqui você encontra o moviee que está procurando."
         />
         <title>Promobit Test</title>
       </Head>

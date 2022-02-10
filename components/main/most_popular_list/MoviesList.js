@@ -57,8 +57,7 @@ const MoviesList = () => {
   const dispatch = useDispatch();
 
   const showDetailsHandler = (movieId) => {
-    dispatch(movieActions.startLoadingState());
-    router.push(`/details/${movieId}`);
+    router.push(`/loading/${movieId}`);
   };
 
   return (

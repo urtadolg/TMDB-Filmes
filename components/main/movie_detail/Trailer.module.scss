@@ -20,6 +20,19 @@
       max-width: 907px;
       height: 510px;
       background-color: $gray;
+
+      @media (max-width: 768px) {
+        height: 182px;
+      }
+
+      .ytContainer {
+        height: 100%;
+
+        .ytPlayer {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }

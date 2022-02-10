@@ -8,6 +8,10 @@
   height: fit-content;
   padding: 72px 0 61px 0;
   background-color: $dark_gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 
   .main_details {
     display: flex;

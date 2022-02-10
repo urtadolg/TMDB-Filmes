@@ -22,9 +22,13 @@
     height: 278px;
     border-radius: 4px;
     background-color: $very_light_gray;
+    background-image: url("../../../public/dummy-banner-w176.jpg");
+    background-position: center;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.075);
     overflow: hidden;
 
     @media (max-width: 768px) {
+      background-image: url("../../../public/dummy-banner-w156.jpg");
       height: 234px;
     }
 

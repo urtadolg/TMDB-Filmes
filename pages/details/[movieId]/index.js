@@ -8,7 +8,9 @@ import { sendMovieDetailsRequest } from "../../../utils/useServerSideRequest";
 const HomePage = (props) => {
   const dispatch = useDispatch();
 
-  useEffect(() => dispatch(movieActions.stopLoadingState()), []);
+  console.log("ENTREI NO PAGE QUE REINICIA");
+
+  useEffect(() => dispatch(movieActions.stopLoadingState()));
 
   return (
     <React.Fragment>
@@ -49,7 +51,7 @@ export async function getStaticProps(context) {
 
   const movieDetailsData = await sendMovieDetailsRequest(movieId);
 
-  //console.log(movieDetailsData);
+  console.log(movieDetailsData.see_also);
 
   return {
     props: movieDetailsData,

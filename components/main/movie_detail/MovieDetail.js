@@ -9,9 +9,9 @@ const MovieDetail = (props) => {
   return (
     <section className={styles.container}>
       <MainDetails {...props.main_details} />
-      <Cast />
-      <Trailer />
-      <SeeAlso />
+      <Cast castList={props.cast} />
+      <Trailer {...props.trailer} />
+      <SeeAlso seeAlsoList={props.see_also} />
     </section>
   );
 };
