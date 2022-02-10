@@ -12,9 +12,6 @@
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/urtadolg/front-end-challenge/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/urtadolg/front-end-challenge?style=social">
-  </a>
 </p>
 
 ---
@@ -35,9 +32,9 @@ Preview: <a href="https://front-end-challenge-ashen.vercel.app/">TMDB</a>
   
   ### Mobile
   <div>
-  <img width="32%" height="698px" alt="Screenshot Mobile 1" title="logo" src="https://user-images.githubusercontent.com/89041463/153475478-3579743a-512d-45c6-945d-2df79719a073.png" />
-  <img width="32%" height="698px" alt="Screenshot Mobile 2" title="logo" src="https://user-images.githubusercontent.com/89041463/153475480-57b70e3a-6b63-4a20-9fd7-e2d1e4fc9473.png" />
-  <img width="32%" height="698px" alt="Screenshot Mobile 3" title="logo" src="https://user-images.githubusercontent.com/89041463/153475481-13057255-c2f4-4025-88f3-682817e9c6fc.png" /> 
+  <img width="32%"  alt="Screenshot Mobile 1" title="logo" src="https://user-images.githubusercontent.com/89041463/153488514-21048b53-d87e-426d-bd58-9d4a9865a26a.png" />
+  <img width="32%"  alt="Screenshot Mobile 2" title="logo" src="https://user-images.githubusercontent.com/89041463/153488516-af1fd81b-e2f6-4fd7-b145-223be067149f.png" />
+  <img width="32%"  alt="Screenshot Mobile 3" title="logo" src="https://user-images.githubusercontent.com/89041463/153488507-d3a9d4c7-7827-4994-bca4-87ae751fff72.png" /> 
 </div>
 
 #### UI do projeto: [Figma](https://www.figma.com/file/rM7WPqhLY9ObnGzSCeWLxB/Teste-Front-End)
