@@ -5,9 +5,7 @@ const Filters = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1>
-          Milhões de moviees, séries e pessoas para descobrir. Explore já.
-        </h1>
+        <h1>Milhões de filmes, séries e pessoas para descobrir. Explore já.</h1>
         <FiltersList />
       </div>
     </section>

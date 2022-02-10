@@ -20,9 +20,9 @@ const HomePage = () => {
       <Head>
         <meta
           name="description"
-          content="Milhões de filmes, séries e pessoas para descobrir. Explore já. Aqui você encontra o moviee que está procurando."
+          content="Milhões de filmes, séries e pessoas para descobrir. Explore já. Aqui você encontra o filme que está procurando."
         />
-        <title>Promobit Test</title>
+        <title>Promobit Test - Leandro</title>
       </Head>
       <Filters />
       <MoviesList />

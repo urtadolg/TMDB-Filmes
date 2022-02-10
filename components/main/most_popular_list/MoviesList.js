@@ -46,7 +46,7 @@ const MoviesList = () => {
         <div className={styles.content}>
           <h1 className={styles.error_title}>Ops...</h1>
           <p className={styles.error_message}>
-            Nenhum moviee encontrado. Tente outros filtros.
+            Nenhum filme encontrado. Tente outros filtros.
           </p>
         </div>
       </section>
