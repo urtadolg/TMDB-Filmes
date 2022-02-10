@@ -28,7 +28,7 @@ const MainDetails = ({
             <br />
             {summary.releaseDate}
             <br />
-            {summary.genres}
+            {summary.genres.join(", ")}
             <br />
             {summary.runtime}
           </p>

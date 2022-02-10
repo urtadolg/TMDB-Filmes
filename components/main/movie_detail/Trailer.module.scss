@@ -20,9 +20,11 @@
       max-width: 907px;
       height: 510px;
       background-color: $gray;
+      background-image: url("../../../public/dummy-trailer-w907.jpg");
 
       @media (max-width: 768px) {
         height: 182px;
+        background-image: url("../../../public/dummy-trailer-w324.jpg");
       }
 
       .ytContainer {
