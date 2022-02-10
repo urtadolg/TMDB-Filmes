@@ -1,34 +1,116 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    <img alt="Promobit Frontend Challenge" title="logo" src="https://user-images.githubusercontent.com/89041463/153469060-24e81aef-b3ea-4d86-8bb2-c051ad0f5f1a.png" />
+</h1>
 
-## Getting Started
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/urtadolg/front-end-challenge?color=%2304D361">
 
-First, run the development server:
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/urtadolg/front-end-challenge">
+  
+  <a href="https://github.com/WesleyMarquesGit/TesteNave/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/urtadolg/front-end-challenge">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+   <a href="https://github.com/urtadolg/front-end-challenge/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/urtadolg/front-end-challenge?style=social">
+  </a>
+</p>
+
+---
+
+### :rocket: Sobre o projeto
+Preview: <a href="https://front-end-challenge-ashen.vercel.app/">TMDB</a>
+
+É um projeto / desafio proposto pelo <a href="https://www.promobit.com.br/">Promobit</a> para a vaga de desenvolvedor frontend. Trata-se de web app para listagem dos filmes mais populares do dia, utilizando a API de filmes gratuita <a href="https://developers.themoviedb.org/3/getting-started/introduction">themoviedb</a> em sua versão 3.
+
+---
+
+### 🎨 Screenshots
+
+  ### Desktop
+  <img alt="Screenshot Desktop 1" title="logo" src="https://user-images.githubusercontent.com/89041463/153473244-89c2cf22-3fd1-4878-a44b-abd76792ce4c.png" />
+  <img alt="Screenshot Desktop 2" title="logo" src="https://user-images.githubusercontent.com/89041463/153475469-7e029d99-89ac-4ac7-9ed8-7c89b7ff6711.png" />
+  <img alt="Screenshot Desktop 3" title="logo" src="https://user-images.githubusercontent.com/89041463/153475474-46ecd5e2-b87e-4394-8a91-86cd1a244335.png" />
+  
+  ### Mobile
+  <div>
+  <img width="32%" height="698px" alt="Screenshot Mobile 1" title="logo" src="https://user-images.githubusercontent.com/89041463/153475478-3579743a-512d-45c6-945d-2df79719a073.png" />
+  <img width="32%" height="698px" alt="Screenshot Mobile 2" title="logo" src="https://user-images.githubusercontent.com/89041463/153475480-57b70e3a-6b63-4a20-9fd7-e2d1e4fc9473.png" />
+  <img width="32%" height="698px" alt="Screenshot Mobile 3" title="logo" src="https://user-images.githubusercontent.com/89041463/153475481-13057255-c2f4-4025-88f3-682817e9c6fc.png" /> 
+</div>
+
+#### UI do projeto: [Figma](https://www.figma.com/file/rM7WPqhLY9ObnGzSCeWLxB/Teste-Front-End)
+
+---
+
+### :space_invader: Tecnologias
+
+As seguintes tecnologias foram usadas na construção do projeto:
+
+- <a href="https://nextjs.org/">React / Nextjs</a>
+- <a href="https://redux.js.org/">Redux</a>
+- <a href="https://sass-lang.com/">Sass / Scss</a>
+- <a href="https://axios-http.com/">Axios</a>
+
+---
+### :computer: Manual
+
+#### Pré-requisitos
+
+- É **necessário** possuir o **[Git][git]** instalado e configurado no computador
+- Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM][npm]** ou **[Yarn][yarn]**.
+
+#### Como executar
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone este repositório
+$ git clone https://github.com/urtadolg/front-end-challenge
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd front-end-challenge
+
+# Instale as dependências
+$ yarn
+# ou
+$ npm install
+
+# Execute a aplicação
+$ yarn dev
+# ou
+$ npm run dev
+
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Configurando variável de ambiente
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Crie um arquivo `.env.local` na pasta raíz do projeto:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```dosini
+API_KEY="SUAAPIKEYAQUI"
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+No local indicado, cole sua chave de acesso da API do <a href="https://developers.themoviedb.org/3/getting-started/introduction">themoviedb</a>
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### :recycle: Como contribuir para o projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### :page_with_curl: Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Este projeto esta sobe a licença MIT.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+[yarn]: https://yarnpkg.com/
+[npm]: https://www.npmjs.com/
+[git]: https://git-scm.com/
+[license]: https://opensource.org/licenses/MIT
