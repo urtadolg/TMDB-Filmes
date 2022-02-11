@@ -103,7 +103,7 @@ No local indicado, cole sua chave de acesso da API do <a href="https://developer
 
 ### :page_with_curl: Licença
 
-Este projeto esta sobe a licença MIT.
+Este projeto esta sob a licença MIT.
 
 ---
 
