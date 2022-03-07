@@ -7,10 +7,8 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/urtadolg/front-end-challenge">
   
-  <a href="https://github.com/WesleyMarquesGit/TesteNave/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/urtadolg/front-end-challenge">
-  </a>
-
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/urtadolg/front-end-challenge">
+    
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
