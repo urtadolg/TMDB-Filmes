@@ -17,7 +17,7 @@
 ### :rocket: Sobre o projeto
 Preview: <a href="https://front-end-challenge-ashen.vercel.app/">TMDB</a>
 
-É um projeto / desafio proposto pelo <a href="https://www.promobit.com.br/">Promobit</a> para a vaga de desenvolvedor frontend. Trata-se de web app para listagem dos filmes mais populares do dia, utilizando a API de filmes gratuita <a href="https://developers.themoviedb.org/3/getting-started/introduction">themoviedb</a> em sua versão 3.
+Trata-se de web app para listagem dos filmes mais populares do dia, utilizando a API de filmes gratuita <a href="https://developers.themoviedb.org/3/getting-started/introduction">themoviedb</a> em sua versão 3.
 
 ---
 
