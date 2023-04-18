@@ -22,7 +22,7 @@ const HomePage = () => {
           name="description"
           content="Milhões de filmes, séries e pessoas para descobrir. Explore já. Aqui você encontra o filme que está procurando."
         />
-        <title>Promobit Test - Leandro</title>
+        <title>TMDB Filmes</title>
       </Head>
       <Filters />
       <MoviesList />
