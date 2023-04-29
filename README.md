@@ -15,7 +15,7 @@
 ---
 
 ### :rocket: Sobre o projeto
-Preview: <a href="https://front-end-challenge-ashen.vercel.app/">TMDB</a>
+Preview: <a href="https://themdb.vercel.app/">TMDB</a>
 
 Trata-se de web app para listagem dos filmes mais populares do dia, utilizando a API de filmes gratuita <a href="https://developers.themoviedb.org/3/getting-started/introduction">themoviedb</a> em sua versão 3.
 
@@ -60,10 +60,10 @@ As seguintes tecnologias foram usadas na construção do projeto:
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/urtadolg/front-end-challenge
+$ git clone https://github.com/urtadolg/TMDB-Filmes
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd front-end-challenge
+$ cd TMDB-Filmes
 
 # Instale as dependências
 $ yarn
